@@ -1,0 +1,523 @@
+/* Start Global Rules */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* End Global Rules */
+
+
+/* Start Header */
+
+header {}
+
+header div.container nav {}
+
+header div.container nav ul {}
+
+header div.container nav ul li {
+    font-weight: bold;
+}
+
+
+/* End Header */
+
+
+/* Start Landing page */
+
+section.landing-page {
+    padding: 100px 0;
+}
+
+section.landing-page div.container {}
+
+section.landing-page div.container div.left {}
+
+section.landing-page div.container div.left h1 {
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+section.landing-page div.container div.left p {
+    line-height: 1.8 !important;
+}
+
+section.landing-page div.container div.left button {
+    width: 150px;
+    height: 50px;
+    background-color: #ffe100;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.landing-page div.container div.right div.img {
+    width: 70%;
+    height: 500px;
+    background-color: #eee;
+}
+
+section.landing-page div.container div.right div.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    header div.container nav img {
+        margin: 30px 0;
+    }
+    header div.container nav {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    header div.container nav ul {
+        flex-direction: column !important;
+    }
+    header div.container nav ul li {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
+
+/* End Landing page */
+
+
+/* Start Portflieu */
+
+div.portfolio {
+    padding: 100px 0;
+}
+
+div.portfolio div.container {}
+
+div.portfolio div.container h1 {
+    font-weight: 800;
+}
+
+div.portfolio div.container div.filter button {
+    height: 40px;
+    background-color: #ffe100;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+}
+
+div.portfolio div.container div.filter button:not(button:first-child) {
+    background-color: #fff;
+}
+
+div.portfolio div.container div.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* grid-template-areas: 'one one one two two two three three three' 'four four four two two two six six six' 'four four four five five five six six six'; */
+    grid-gap: 20px;
+}
+
+div.portfolio div.container div.photos div {
+    background-color: #eee;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+div.portfolio div.container div.photos div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.portfolio div.container button.show-more {
+    background-color: #ffe100;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    section.landing-page {
+        padding: 0;
+    }
+    section.landing-page div.container h1 {
+        text-align: center;
+    }
+    section.landing-page div.container p {
+        text-align: center;
+        font-size: 14px;
+    }
+    section.landing-page div.container button {
+        margin: 15px auto;
+        display: block;
+    }
+    section.landing-page div.container div.parent {
+        flex-direction: column;
+    }
+    section.landing-page div.container div.parent div {
+        width: 100% !important;
+    }
+    div.partner {
+        flex-wrap: wrap;
+    }
+    div.partner img {
+        margin: 15px 0;
+    }
+    section.landing-page div.container div.right div.img {
+        display: none;
+    }
+}
+
+
+/* End Portflieu */
+
+
+/* Start About Us */
+
+div.about-us {
+    padding: 100px 0;
+}
+
+div.about-us div.container {}
+
+div.about-us div.container h1 {
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+div.about-us div.container p {
+    font-weight: bold;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+div.about-us div.container div.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 10px;
+}
+
+div.about-us div.container div.about div {
+    height: 350px;
+    background-color: #eee;
+    position: relative;
+    transition: 0.6s;
+}
+
+div.about-us div.container div.about div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+div.about-us div.container div.about div span.info {
+    width: 80%;
+    position: absolute;
+    background-color: #ffe100;
+    padding: 15px 25px 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.6s;
+    cursor: pointer;
+    z-index: 2;
+}
+
+div.about-us div.container div.about div:hover span.info {
+    width: 100%;
+}
+
+div.about-us div.container div.about div span.info h4 {
+    font-size: 17px;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.7);
+    transition: 0.6s;
+}
+
+div.about-us div.container div.about div:hover span.info h4 {
+    text-align: center;
+}
+
+div.about-us div.container div.about div span.info p {
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.6s;
+}
+
+div.about-us div.container div.about div:hover span.info p {
+    text-align: center;
+}
+
+div.about-us div.container div.about div.description {
+    background-color: transparent;
+}
+
+div.about-us div.container div.about div.description h5 {
+    font-weight: bold;
+}
+
+div.about-us div.container div.about div.description p {
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+div.about-us div.container div.about div.description span {
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+div.about-us div.container div.about div.description span:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    div.about-us div.container h1 {
+        text-align: center;
+    }
+    div.about-us div.container p {
+        width: 100% !important;
+        text-align: center;
+    }
+    div.about-us div.container div.about div.description {
+        text-align: center;
+    }
+    div.about-us div.container div.about div.description h5 {
+        margin: 30px auto;
+    }
+}
+
+
+/* End About Us */
+
+
+/* Start Our Blog */
+
+div.our-blog {
+    padding: 100px 0;
+}
+
+div.our-blog div.container {}
+
+div.our-blog div.container h1 {
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+div.our-blog div.container p {
+    font-weight: bold;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+div.our-blog div.container div.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 30px;
+}
+
+div.our-blog div.container div.articles div {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    position: relative;
+}
+
+div.our-blog div.container div.articles div::before {
+    content: 'READ MORE';
+    width: 100%;
+    height: 55%;
+    background-color: rgba(255, 225, 0, 0.7);
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.6s;
+    cursor: pointer;
+    align-items: center;
+}
+
+div.our-blog div.container div.articles div:hover::before {
+    left: 0;
+    top: 0;
+}
+
+div.our-blog div.container div.articles div img {
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+}
+
+div.our-blog div.container div.articles div span.info {
+    padding: 15px 20px;
+}
+
+div.our-blog div.container div.articles div h6 {
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+div.our-blog div.container div.articles div p {
+    font-weight: 500;
+}
+
+@media (max-width: 767px) {
+    div.our-blog div.container h1 {
+        text-align: center;
+    }
+    div.our-blog div.container p {
+        width: 100% !important;
+        text-align: center;
+    }
+    div.our-blog div.container div.articles div {
+        text-align: center;
+    }
+}
+
+
+/* End Our Blog */
+
+
+/* Start Contact Us */
+
+div.contact-us {
+    padding: 100px 0;
+}
+
+div.contact-us div.container {}
+
+div.contact-us div.container h1 {
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+div.contact-us div.container p {
+    font-weight: bold;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+div.contact-us div.container h2 {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+div.contact-us div.container div.contact form input:focus,
+textarea:focus {
+    border-color: #b39f0a !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 225, 0, 0.25);
+}
+
+textarea {
+    resize: none;
+}
+
+div.contact-us div.container div.contact form button {
+    width: 150px;
+    height: 50px;
+    background-color: #ffe100;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.contact-us div.container div.contact div.img {
+    width: 50%;
+    height: 400px;
+    background-color: transparent;
+}
+
+div.contact-us div.container div.contact div.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    div.contact-us div.container h1 {
+        text-align: center;
+    }
+    div.contact-us div.container p {
+        width: 100% !important;
+        text-align: center;
+    }
+    div.contact-us div.container h2 {
+        text-align: center;
+    }
+    div.contact-us div.container div.contact {
+        flex-direction: column;
+    }
+    div.contact-us div.container div.contact form {
+        width: 100%;
+        align-items: center;
+    }
+    div.contact-us div.container div.contact form button {
+        margin: auto;
+        display: block;
+    }
+    div.contact-us div.container div.contact div.img {
+        display: none;
+    }
+    div.contact-us div.container div.contact-me {
+        flex-direction: column;
+    }
+    div.contact-us div.container div.contact-me div {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* End Contact Us */
+
+
+/* Start Footer */
+
+footer {
+    padding: 150px 0;
+}
+
+footer span.to-top {
+    cursor: pointer;
+}
+
+footer span.to-top a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    footer div.container {
+        flex-direction: column !important;
+    }
+    footer div.container span.logo {
+        flex-direction: column;
+    }
+    footer div.container span.logo img {
+        margin-bottom: 30px;
+    }
+    footer div.container span.to-top {
+        margin-top: 15px;
+    }
+}
+
+
+/* End Footer */
